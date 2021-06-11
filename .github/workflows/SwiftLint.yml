@@ -1,4 +1,5 @@
-on: [pull_request]
+name: Apple swift-format
+on: [push, pull_request]
 
 jobs:
   swift-format-lint:
