@@ -1,7 +1,15 @@
+###############################################
+# Danger #
+###############################################
+
+name: Danger
+on: push
+
 jobs:
-  build:
+  run-linters:
+    name: Danger
     runs-on: ubuntu-latest
-    name: "Run Danger"
+
     steps:
       - uses: actions/checkout@v1
       - name: Danger
