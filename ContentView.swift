@@ -49,7 +49,7 @@ class Vehicle {
 
     // Getters
 
-    func getColour() -> String {
+    func getColour()->String {
         return self.colour
     }
 
