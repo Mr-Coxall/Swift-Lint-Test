@@ -16,10 +16,10 @@ jobs:
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
           args: --strict
-      - name: GitHub Action for SwiftLint with --lint
+      - name: GitHub Action for SwiftLint with --autocorrect
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
-          args: --lint  
+          args: --autocorrect  
       - name: GitHub Action for SwiftLint (Different working directory)
         uses: norio-nomura/action-swiftlint@3.2.1
         env:
