@@ -3,7 +3,7 @@ name: SwiftLint
 on: [push, pull_request]
 
 jobs:
-  SwiftLint --fix:
+  SwiftLint--fix:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,7 +11,7 @@ jobs:
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
           args: --fix
-  SwiftLint --strict:
+  SwiftLint--strict:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
