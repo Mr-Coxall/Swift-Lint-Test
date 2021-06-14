@@ -1,22 +1,13 @@
 name: SwiftLint
 
-on:
-  push:
-    paths:
-      - '.github/workflows/swiftlint.yml'
-      - '.swiftlint.yml'
-      - '**/*.swift'
+on: [push, pull_request]
 
 jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: GitHub Action for SwiftLint with --config
+      - name: GitHub Action for SwiftLint with --strict
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
-          args: --config ".swiftlint.yml"  
-      - name: GitHub Action for SwiftLint (Different working directory)
-        uses: norio-nomura/action-swiftlint@3.2.1
-        env:
-          WORKING_DIRECTORY: Source
+          args: --strict
